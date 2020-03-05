@@ -18,6 +18,10 @@ vector<Dynastring> ParseFile(string fileName)
             strings.push_back(Dynastring(temp.data(), temp.length()));
         }
     }
+    else {
+        cout << "Could not find input file \""<< fileName << "\"" << endl;
+        throw 0;
+    }
     inputFile.close();
     return strings;
 }
